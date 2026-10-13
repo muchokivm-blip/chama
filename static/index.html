@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>chama</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main>
+    <h1>chama</h1>
+    <p class="sub">Who has paid, who receives, and whose turn is next.</p>
+    <form id="amountForm" class="line">
+      <label for="amount">Monthly amount (KES)</label>
+      <input id="amount" type="number" min="1">
+      <button>Save</button>
+    </form>
+    <p id="msg" role="status"></p>
+
+    <section>
+      <h2>This month</h2>
+      <p>Receiving: <strong id="next"></strong></p>
+      <ul id="checks"></ul>
+      <p id="pot"></p>
+      <button id="close" class="primary"></button>
+    </section>
+
+    <section>
+      <h2>Rotation</h2>
+      <ol id="order"></ol>
+      <form id="addForm" class="line">
+        <input id="newname" placeholder="Add a member" required maxlength="40" autocomplete="off">
+        <button>Add</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>History</h2>
+      <ul id="history"></ul>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
